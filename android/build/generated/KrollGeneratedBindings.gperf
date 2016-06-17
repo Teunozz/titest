@@ -1,0 +1,16 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name TitestBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "teunozz.test.module.TitestModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+teunozz.test.module.TitestModule, ::teunozz::test::module::TitestModule::bindProxy, ::teunozz::test::module::TitestModule::dispose
+%%
